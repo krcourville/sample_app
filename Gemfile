@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby', '3.1.2'
 
 
 group :development, :test do
@@ -16,13 +17,14 @@ group :development, :test do
 end
 
 group :test do
+  gem 'sqlite3'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   
   gem 'rb-notifu', '0.0.4'
   #gem 'win32console', '1.3.2'
-  require 'rbconfig'
-  #gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+  # require 'rbconfig'
+  # gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
   gem 'listen', '~> 2.0'
 end
 
